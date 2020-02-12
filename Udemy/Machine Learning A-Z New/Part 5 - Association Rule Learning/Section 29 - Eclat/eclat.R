@@ -1,15 +1,3 @@
-# Eclat
-
-# Data Preprocessing
-# install.packages('arules')
-library(arules)
-dataset = read.csv('Market_Basket_Optimisation.csv')
-dataset = read.transactions('Market_Basket_Optimisation.csv', sep = ',', rm.duplicates = TRUE)
-summary(dataset)
-itemFrequencyPlot(dataset, topN = 10)
-
-# Training Eclat on the dataset
-rules = eclat(data = dataset, parameter = list(support = 0.003, minlen = 2))
-
-# Visualising the results
-inspect(sort(rules, by = 'support')[1:10])
+version https://git-lfs.github.com/spec/v1
+oid sha256:86637f9723357bb70608a603b16539655c67269f143036cee60be50229b38a47
+size 457
